@@ -34,9 +34,9 @@ count: 1
 #
 secrets:                      # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
   # The key is the name of the environment variable, the value is the name of the SSM parameter.
-  POSTGRES_HOST: POSTGRES_HOST,
-  POSTGRES_USER: POSTGRES_USER,
-  POSTGRES_PORT: POSTGRES_PORT
+  POSTGRES_HOST: /quickchat/postgres_host,
+  POSTGRES_USER: /quickchat/postgres_user,
+  POSTGRES_PORT: /quickchat/postgres_port
 
 # You can override any of the values defined above by environment.
 #environments:
