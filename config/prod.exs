@@ -14,7 +14,7 @@ config :quick_chat, QuickChat.Repo,
   database: "postgres",
   username: System.get_env("POSTGRES_USER"),
   password: System.get_env("POSTGRES_PASSWORD"),
-  hostname: "quick-chat-database",
+  hostname: System.get_env("POSTGRES_HOST"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 # Do not print debug messages in production
