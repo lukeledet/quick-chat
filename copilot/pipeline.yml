@@ -1,7 +1,7 @@
 # This YAML file defines the relationship and deployment ordering of your environments.
 
 # The name of the pipeline
-name: pipeline-quickchat-lukeledet-quick-chat.git
+name: pipeline-quickchat-lukeledet-quick-chat
 
 # The version of the schema used in this template
 version: 1
@@ -16,7 +16,7 @@ source:
   properties:
     access_token_secret: github-token-quickchat-quick-chat.git
     branch: master
-    repository: https://github.com/lukeledet/quick-chat.git
+    repository: https://github.com/lukeledet/quick-chat
 
 # The deployment section defines the order the pipeline will deploy
 # to your environments.
