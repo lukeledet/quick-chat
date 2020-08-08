@@ -6,6 +6,7 @@ config :quick_chat, QuickChat.Repo,
   username: System.get_env("POSTGRES_USER"),
   password: System.get_env("POSTGRES_PASSWORD"),
   hostname: System.get_env("POSTGRES_HOSTNAME") || "quick-chat-database",
+  port: String.to_integer(System.get_env("POSTGRES_PORT") || "5432"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 config :quick_chat, QuickChatWeb.Endpoint,

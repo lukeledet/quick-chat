@@ -14,7 +14,7 @@ config :quick_chat, QuickChat.Repo,
   database: "postgres",
   username: System.get_env("POSTGRES_USER"),
   password: System.get_env("POSTGRES_PASSWORD"),
-  hostname: System.get_env("POSTGRES_HOST"),
+  hostname: System.get_env("POSTGRES_HOSTNAME"),
   port: String.to_integer(System.get_env("POSTGRES_PORT") || "5432"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 

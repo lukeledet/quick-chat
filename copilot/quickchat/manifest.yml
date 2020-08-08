@@ -29,12 +29,12 @@ count: 1
 
 # Optional fields for more advanced use-cases.
 #
-#variables:                    # Pass environment variables as key value pairs.
-#  LOG_LEVEL: info
-#
+variables:                    # Pass environment variables as key value pairs.
+  APP_DOMAIN: quickchat.snackoverflow.io
+
 secrets:                      # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
   # The key is the name of the environment variable, the value is the name of the SSM parameter.
-  POSTGRES_HOST: /quickchat/postgres_host,
+  POSTGRES_HOSTNAME: /quickchat/postgres_host,
   POSTGRES_USER: /quickchat/postgres_user,
   POSTGRES_PORT: /quickchat/postgres_port
 
