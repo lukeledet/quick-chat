@@ -34,6 +34,7 @@ variables:                    # Pass environment variables as key value pairs.
 
 secrets:                      # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
   # The key is the name of the environment variable, the value is the name of the SSM parameter.
+  SECRET_KEY_BASE: /quickchat/secret_key_base
   POSTGRES_HOSTNAME: /quickchat/postgres_host
   POSTGRES_USER: /quickchat/postgres_user
   POSTGRES_PORT: /quickchat/postgres_port
