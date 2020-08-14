@@ -20,7 +20,7 @@ defmodule QuickChat.Mixfile do
         integration_tests: :test
       ],
       releases: [
-        app: [
+        quick_chat: [
           config_providers: [{AwsParameterStoreConfigProvider, nil}]
         ]
       ]
