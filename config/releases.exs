@@ -2,11 +2,11 @@ import Config
 # NOTE: Runtime production configuration goes here
 
 config :quick_chat, QuickChat.Repo,
-  database: System.get_env("POSTGRES_DATABASE") || "postgres",
-  username: System.get_env("POSTGRES_USER"),
-  password: System.get_env("POSTGRES_PASSWORD"),
-  hostname: System.get_env("POSTGRES_HOSTNAME") || "quick-chat-database",
-  port: String.to_integer(System.get_env("POSTGRES_PORT") || "5432"),
+  database: "secret:/quickchat/postgres_database",
+  username: "secret:/quickchat/postgres_username",
+  password: "secret:/quickchat/postgres_password",
+  hostname: "secret:/quickchat/postgres_hostname",
+  port: {"secret:/quickchat/postgres_port", fn val -> String.to_integer(val || "5432") end},
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 config :quick_chat, QuickChatWeb.Endpoint,

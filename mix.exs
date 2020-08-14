@@ -18,6 +18,11 @@ defmodule QuickChat.Mixfile do
         "coveralls.post": :test,
         "coveralls.html": :test,
         integration_tests: :test
+      ],
+      releases: [
+        app: [
+          config_providers: [{AwsParameterStoreConfigProvider, nil}]
+        ]
       ]
     ]
   end
@@ -61,6 +66,7 @@ defmodule QuickChat.Mixfile do
       {:bamboo, "~> 1.4.0"},
       {:ex_aws, "~> 2.1"},
       {:ex_aws_s3, "~> 2.0"},
+      {:ex_aws_ssm, "~> 2.1.0"},
       {:ex_machina, "~> 2.2", only: :test},
       {:stream_data, "~> 0.4.2", only: :test},
       {:joken, "~> 2.0"},
@@ -79,7 +85,8 @@ defmodule QuickChat.Mixfile do
       {:phoenix_live_view, "~> 0.13.3"},
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.1"},
-      {:plug_heartbeat, "~> 1.0"}
+      {:plug_heartbeat, "~> 1.0"},
+      {:aws_parameter_store_config_provider, "~> 1.0.0"}
     ]
   end
 
